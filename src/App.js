@@ -1,4 +1,4 @@
-import './App.css';
+import Feature from './pages/Feature.jsx';
 import React, {useEffect} from 'react';
 import ReactGa from 'react-ga';
 import {Animated} from "react-animated-css";
@@ -19,8 +19,8 @@ function App() {
     ReactGa.pageview('/');
   })
   return ( 
-    
-    <div class="container md:flex justify-center items-center h-screen w-screen">
+    <div>
+        <div class="container md:flex justify-center items-center h-screen w-screen">
       <div class="container filter drop-shadow-lg bg-purple-200 rounded-lg border-2 h-1/2 md:w-1/2 w-screen mb-10">
       </div>
       <div class="mx-16">
@@ -39,8 +39,11 @@ function App() {
         <button onClick={clickHandler} class="font-bold text-lg mt-10 bg-purple-600 hover:bg-purple-700 rounded-lg p-3 text-white flex items-center justify-center">
                 I'm interested
         </button>
-      </div>
+      </div>     
     </div>
+      <Feature/>
+    </div>
+    
     
   );
 }
