@@ -1,4 +1,5 @@
 import Feature from './pages/Feature.jsx';
+import Third from './pages/Third.jsx'
 import React, {useEffect} from 'react';
 import ReactGa from 'react-ga';
 import {Animated} from "react-animated-css";
@@ -20,31 +21,32 @@ function App() {
   })
   return ( 
     <div>
-        <div class="container md:flex justify-center items-center h-screen w-screen">
-      <div class="container filter drop-shadow-lg bg-purple-200 rounded-lg border-2 h-1/2 md:w-1/2 w-screen mb-10">
+      <div class="lg:flex m-5 h-screen">
+        <div class="lg:w-1/2">
+          <img class="mx-auto lg:w-4/5 lg:h-4/5" src={require("./assets/progess.svg")}/>
+        </div>
+          <div class="flex flex-col justify-center items-center lg:items-start">
+            <Animated animationIn="slideInUp">
+                <h1 class="font-semibold lg:text-5xl text-3xl lg:text-left text-center mb-3">
+                  Track progress <br />
+                  instead of Time
+                </h1>
+            </Animated>
+            <Animated animationInDelay="800">
+              <p class="md:text-2xl text-lg text-center">
+                Track what get's done in an easy understand <br/>
+                <span>virtual way and share your work in real time</span> 
+              </p>
+            </Animated>
+            <button onClick={clickHandler} class="font-bold text-lg mt-10 bg-purple-500 hover:bg-purple-700 rounded-lg p-3 text-white w-40 items-center">
+                    I'm interested
+            </button>
+          </div>
       </div>
-      <div class="mx-16">
-        <Animated animationIn="slideInUp">
-            <p class="font-semibold lg:text-5xl text-4xl mb-5">
-              Track progress <br />
-              instead of Time
-            </p>
-        </Animated>
-        <Animated animationInDelay="800">
-          <p class="lg:text-2xl text-xl">
-            Track what get's done in an easy understand <br/>
-            virtual way and share your work in real time
-          </p>
-        </Animated>
-        <button onClick={clickHandler} class="font-bold text-lg mt-10 bg-purple-600 hover:bg-purple-700 rounded-lg p-3 text-white flex items-center justify-center">
-                I'm interested
-        </button>
-      </div>     
-    </div>
-      <Feature/>
-    </div>
-    
-    
+      {/* second */}
+        <Feature/>
+        <Third/>
+    </div> 
   );
 }
 
