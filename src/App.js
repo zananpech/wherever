@@ -18,7 +18,7 @@ function App() {
 
   useEffect(() => {
     ReactGa.initialize('UA-179333339-1');
-    ReactGa.pageview('/');
+    ReactGa.pageview('/landing_page');
   })
   return (
     <div>
