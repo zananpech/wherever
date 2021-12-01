@@ -23,8 +23,8 @@ function App() {
   return (
     <div>
       <div class="lg:flex m-5 h-screen">
-        <div class="lg:w-1/2 lg:h-3/5 mt-48">
-          <img class="mx-auto md:w-4/5 md:h-4/5" src={require("./assets/progess.svg")} />
+        <div class="md:w-screen lg:w-1/2 md:h-1/2 lg:h-screen lg:flex items-center">
+          <img class="mx-auto lg:h-3/4 lg:w-3/4" src={require("./assets/progess.svg")} />
         </div>
         <div class="flex flex-col justify-center items-center lg:items-start">
           <Animated animationIn="slideInUp">
