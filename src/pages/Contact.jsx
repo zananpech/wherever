@@ -6,14 +6,14 @@ import '../styles/style.css'
 function Contact() {
 
     return (
-        <div class="container md:flex justify-center items-center h-screen w-screen">
+        <div class="container md:flex justify-center items-center h-screen w-screen mt-5">
             <div class="mx-16">
                 <Animated animationIn="slideInUp">
                     <p class="font-semibold lg:text-5xl text-4xl mb-5">Notify Me</p>
                 </Animated>
                 <Animated animationInDelay="800">
                     <p class="lg:text-2xl text-xl">
-                        We are not ready to fully roll out <br /> wherever.compnay, but sign up and we'll <br /> keep you posted.
+                        We are not ready to fully roll out <br /> wherever company, but sign up and we'll <br /> keep you posted.
                     </p>
                 </Animated>
                 <Animated animationInDelay="800">
