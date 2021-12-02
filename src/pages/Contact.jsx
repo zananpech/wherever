@@ -1,7 +1,7 @@
 import React from "react";
 import { Animated } from "react-animated-css";
 import "../styles/style.css";
-import { viewTrackingHandler } from "../helpers/Helpers";
+import { viewTrackingHandler, clickHandler } from "../helpers/Helpers";
 
 function Contact() {
   return (
@@ -27,7 +27,10 @@ function Contact() {
             />
           </form>
         </Animated>
-        <button class="font-bold transition-all text-lg mt-8 bg-green-500 hover:bg-blue-700 rounded-lg p-3 text-white flex items-center justify-center">
+        <button
+          onClick={() => clickHandler("Keep me posted button is clicked")}
+          class="font-bold transition-all text-lg mt-8 bg-green-500 hover:bg-blue-700 rounded-lg p-3 text-white flex items-center justify-center"
+        >
           Keep me posted!
         </button>
       </div>

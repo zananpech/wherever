@@ -4,19 +4,11 @@ import Contact from "./pages/Contact";
 import React, { Component } from "react";
 import ReactGa from "react-ga";
 import { Animated } from "react-animated-css";
-import { viewTrackingHandler } from "./helpers/Helpers";
+import { viewTrackingHandler, clickHandler } from "./helpers/Helpers";
 
 ReactGa.initialize("UA-179333339-1");
 
 class App extends Component {
-  clickHandler = () => {
-    ReactGa.event({
-      category: "click",
-      action: "click Im interested Button",
-    });
-    alert("Send information to googly analytics.");
-  };
-
   render() {
     return (
       <div onMouseEnter={this.initializeGoogleAnalytics}>
@@ -44,7 +36,7 @@ class App extends Component {
               </p>
             </Animated>
             <button
-              onClick={this.clickHandler}
+              onClick={() => clickHandler("I'm interested button is clicked")}
               className="font-bold text-lg mt-10 transition-all bg-purple-500 hover:bg-purple-800 rounded-lg p-3 text-white w-40 items-center"
             >
               I'm interested
